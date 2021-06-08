@@ -17,8 +17,8 @@ Do the following:
 
    HINT: no function required
 */
-
-
+var votingAge = 19
+console.log(votingAge >= 18)
 
 /*
 Task 1b - Values
@@ -30,8 +30,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+var mister = 10 
+var missus = 20
+if(missus > 15){
+  mister = 35
+}
+console.log(mister);
 
 
 
@@ -46,8 +50,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+var year = '1999'
+console.log(Number(year));
 
 /*
 Task 1d - Multiply
@@ -58,10 +62,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
-
+console.log(multiply(5, 10));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +78,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
-
+console.log(dogYears(15));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -152,8 +156,36 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+// const pc = Math.random();
+//     if(pc <= .333){
+//       let computer = 'rock';
+//     }else if(pc > .333 && pc <= .666){
+//       let computer = 'paper';
+//     }else if(pc > .666){
+//       let computer = 'scissors';
+//     }
 function game(user, computer){
-    /*add your code here*/
+    if(computer === 'rock' && user === 'rock'){
+      return "it's a tie";
+    }else if(computer === 'rock' && user === 'paper'){
+      return "you win!";
+    }else if(computer === 'rock' && user === 'scissors'){
+      return "you lose!";
+    }
+    if(computer === 'paper' && user === 'rock'){
+      return "you lose!";
+    }else if(computer === 'paper' && user === 'paper'){
+      return "it's a tie";
+    }else if(computer === 'paper' && user === 'scissors'){
+      return "you win!";
+    }
+    if(computer === 'scissors' && user === 'rock'){
+      return "you win!";
+    }else if(computer === 'scissors' && user === 'paper'){
+      return "you lose!";
+    }else if(computer === 'scissors' && user === 'scissors'){
+      return "it's a tie";
+    }
 }
   
   
@@ -169,8 +201,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    let imperial = km * 0.621371
+    return imperial;
   }
 
 
@@ -183,8 +216,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    let imperial = cm / 30.48;
+    return imperial;
   }
  
 
