@@ -233,8 +233,10 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(refrain){
+        for(let i = refrain; i > 0; i--){
+        return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
+      }
   }
 
 
@@ -253,9 +255,19 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score < 60){
+    return 'you got an F';
+  }else if(score >= 60 && score <= 69){
+    return 'you got a D';
+  }else if(score >= 70 && score <= 79){
+    return 'you got a C';
+  }else if(score >= 80 && score <= 89){
+    return 'you got a B';
+  }else if(score >= 90 && score <= 100){
+    return 'you got an A';
   }
+}
   
   
 
@@ -270,10 +282,64 @@ Using the vowelCounter function below do the following:
   HINT - you may need to study tomorrow's content on arrays 
   HINT - try looking up the .includes() method
 */
-
-
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(word){
+  let i = 0;
+  let vowels = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'];
+  if(word.includes(vowels[0])){
+    i++;
+  }
+  if(word.includes(vowels[1])){
+    i++;
+  }
+  if(word.includes(vowels[2])){
+    i++;
+  }
+  if(word.includes(vowels[3])){
+    i++;
+  }
+  if(word.includes(vowels[4])){
+    i++;
+  }
+  if(word.includes(vowels[5])){
+    i++;
+  }
+  if(word.includes(vowels[6])){
+    i++;
+  }
+  if(word.includes(vowels[7])){
+    i++;
+  }
+  if(word.includes(vowels[8])){
+    i++;
+  }
+  if(word.includes(vowels[9])){
+    i++;
+  }
+  if(word.includes(vowels[10])){
+    i++;
+  }
+  if(word.includes(vowels[11])){
+    i++;
+  }
+  if(word.includes(vowels[0]) && word.includes(vowels[6])){
+    i--;
+  }
+  if(word.includes(vowels[1]) && word.includes(vowels[7])){
+    i--;
+  }
+  if(word.includes(vowels[2]) && word.includes(vowels[8])){
+    i--;
+  }
+  if(word.includes(vowels[3]) && word.includes(vowels[9])){
+    i--;
+  }
+  if(word.includes(vowels[4]) && word.includes(vowels[10])){
+    i--;
+  }
+  if(word.includes(vowels[5]) && word.includes(vowels[11])){
+    i--;
+  }
+  return i;
 }
 
 
